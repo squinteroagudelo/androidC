@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:id="@+id/ivAddUser"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04000002"
+        app:srcCompat="@drawable/ic_add_user" />
+
+    <EditText
+        android:id="@+id/etAddName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:backgroundTintMode="src_in"
+        android:ems="12"
+        android:hint="@string/hint_name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAddUser" />
+
+    <EditText
+        android:id="@+id/etAddUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="12"
+        android:hint="@string/hint_username"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddName" />
+
+    <EditText
+        android:id="@+id/etAddPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="12"
+        android:hint="@string/hint_password"
+        android:inputType="textPersonName|textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddUserName" />
+
+    <EditText
+        android:id="@+id/etAddCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="12"
+        android:hint="@string/hint_city"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddPassword" />
+
+    <Button
+        android:id="@+id/btnSaveUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_rounded"
+        android:ems="7"
+        android:onClick="addUser"
+        android:text="@string/btn_save"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSearchUser"
+        app:layout_constraintEnd_toEndOf="@+id/etAddCity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/etAddCity"
+        app:layout_constraintTop_toBottomOf="@+id/etAddCity"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btnCancelUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_rounded_outline"
+        android:ems="7"
+        android:onClick="cancelar"
+        android:text="@string/btn_cancel"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnDeleteUser"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnDeleteUser"
+        app:layout_constraintTop_toBottomOf="@+id/btnDeleteUser" />
+
+    <Button
+        android:id="@+id/btnDeleteUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_rounded_outline"
+        android:ems="7"
+        android:onClick="deleteUser"
+        android:text="@string/btn_delete"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancelUser"
+        app:layout_constraintEnd_toEndOf="@+id/btnSearchUser"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnSearchUser"
+        app:layout_constraintTop_toBottomOf="@+id/btnSearchUser" />
+
+    <Button
+        android:id="@+id/btnSearchUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_rounded_outline"
+        android:ems="7"
+        android:onClick="searchUser"
+        android:text="@string/btn_search"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDeleteUser"
+        app:layout_constraintEnd_toEndOf="@+id/btnSaveUser"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnSaveUser"
+        app:layout_constraintTop_toBottomOf="@+id/btnSaveUser" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

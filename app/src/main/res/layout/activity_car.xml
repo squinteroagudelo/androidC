@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarActivity">
+
+    <ImageView
+        android:id="@+id/ivAddCar"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04000002"
+        app:srcCompat="@drawable/ic_add_car" />
+
+    <EditText
+        android:id="@+id/etAddPlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="12"
+        android:hint="@string/hint_number_plate"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAddCar" />
+
+    <EditText
+        android:id="@+id/etAddModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="12"
+        android:hint="@string/hint_model"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddPlate" />
+
+    <EditText
+        android:id="@+id/etAddBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="12"
+        android:hint="@string/hint_brand"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddModel" />
+
+    <EditText
+        android:id="@+id/etAddPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="12"
+        android:hint="@string/hint_price"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddBrand" />
+
+    <Button
+        android:id="@+id/btnSaveCar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_rounded"
+        android:onClick="addCar"
+        android:text="@string/btn_save"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSearchCar"
+        app:layout_constraintEnd_toEndOf="@+id/etAddPrice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/etAddPrice"
+        app:layout_constraintTop_toBottomOf="@+id/etAddPrice"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btnSearchCar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_rounded_outline"
+        android:ems="7"
+        android:onClick="searchCar"
+        android:text="@string/btn_search"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDeleteCar"
+        app:layout_constraintEnd_toEndOf="@+id/btnSaveCar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnSaveCar"
+        app:layout_constraintTop_toBottomOf="@+id/btnSaveCar" />
+
+    <Button
+        android:id="@+id/btnDeleteCar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_rounded_outline"
+        android:onClick="deleteCar"
+        android:text="@string/btn_delete"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancelCar"
+        app:layout_constraintEnd_toEndOf="@+id/btnSearchCar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnSearchCar"
+        app:layout_constraintTop_toBottomOf="@+id/btnSearchCar" />
+
+    <Button
+        android:id="@+id/btnCancelCar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_rounded_outline"
+        android:ems="7"
+        android:onClick="cancelar"
+        android:text="@string/btn_cancel"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnDeleteCar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnDeleteCar"
+        app:layout_constraintTop_toBottomOf="@+id/btnDeleteCar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

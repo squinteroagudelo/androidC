@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Concesionario</string>
+    <string name="hint_username">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_sign_in">Ingresar</string>
+    <string name="btn_sign_up">Registrarse</string>
+    <string name="btn_add_car">Agregar carro</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_city">Ciudad</string>
+    <string name="btn_search">Buscar</string>
+    <string name="btn_delete">Eliminar</string>
+    <string name="btn_save">Guardar</string>
+    <string name="btn_cancel">Limpiar</string>
+    <string name="hint_number_plate">Número de placa</string>
+    <string name="hint_model">Modelo</string>
+    <string name="hint_brand">Marca</string>
+    <string name="hint_price">Precio</string>
+    <string name="title_sales_act">Ventas</string>
+    <string name="hint_color_car">Color</string>
+    <string name="btn_buy_car">Comprar</string>
+    <string name="empty_login_data">Digite sus datos de ingreso</string>
+    <string name="invalid_login">Usuario o contraseña incorrecta</string>
+    <string name="check_plate">Consulte una placa</string>
+    <string name="enter_color">Ingrese un color</string>
+    <string name="info_saved">Registro almacenado con éxito</string>
+    <string name="info_updated">Registro actualizado con éxito</string>
+    <string name="update_failed">Actualización ha fallado</string>
+    <string name="save_failed">Error al guardar</string>
+    <string name="full_datas">Ingrese los datos requeridos</string>
+    <string name="plate_required">La placa es requerida</string>
+    <string name="info_deleted">Registro eliminado con éxito</string>
+    <string name="delete_failed">Error al eliminar</string>
+    <string name="car_no_found">El carro no está registrado</string>
+    <string name="plate_not_exists">La placa no existe</string>
+    <string name="sold">El carro ha sido vendido</string>
+    <string name="user_required">Usuario requerido</string>
+    <string name="user_no_found">Usuario no está registrado</string>
+</resources>
